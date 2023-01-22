@@ -43,7 +43,7 @@ int _printf(const char *format, ...)
 		}
 		else if(format[i] == fmts[3][0] && format[i + 1] == fmts[3][1])
 		{
-			cnum += writenum((int) va_arg(string, unsigned int));
+			cnum += writenum((int) va_arg(string, int));
 			i++;
 		}
 		else
