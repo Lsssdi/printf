@@ -10,20 +10,22 @@
 
 int writenum(int num)
 {
-	int i = 0;
+	int i = 1;
+	int n;
 
 	if (num < 0)
 	{
-		putchar('-');
+		char sym = '-';
+		write(1, &sym, sizeof('-'));
 		num *= -1;
 		i++;
 	}
 
 	if (num / 10 > 0)
-		writenum(num / 10);
+		i = i + writenum(num / 10);
 
-	putchar('0' + (num % 10));
-	i++;
+	n ='0' + num % 10;
+	write(1, &n, sizeof(n));
 
 	return (i);
 }
