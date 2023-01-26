@@ -54,7 +54,7 @@ int writestring(char *s)
 
 	while (*(s + i))
 	{
-		write(1, (s + i), sizeof (*(s + i)));
+		_putchar(*(s + i));
 		i++;
 	}
 

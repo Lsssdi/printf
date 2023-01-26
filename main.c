@@ -30,7 +30,7 @@ int main(void)
 	/*_printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait"
 	 * , '\n');*/
 	/*_printf(NULL);*/
-	/*_printf("%");*/
+	_printf("%");
 	_printf("Let's try to printf a simple sentence.\n");
 	printf("Let's try to printf a simple sentence.\n");
 	_printf("Character:[%c]\n", 'H');

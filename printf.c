@@ -1,7 +1,4 @@
-#include <unistd.h>
 #include <stdarg.h>
-#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include "main.h"
 
@@ -47,7 +44,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			write(1, &format[i], sizeof(format[i]));
+			_putchar(format[i]);
 			cnum++;
 		}
 
