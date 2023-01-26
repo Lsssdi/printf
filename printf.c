@@ -14,7 +14,7 @@
 
 int _printf(const char *format, ...)
 {
-	char* fmts[] = {"%c", "%s", "%d", "%i"};
+	char *fmts[] = {"%c", "%s", "%d", "%i"};
 	int i = 0;
 	int cnum = 0;
 
@@ -26,8 +26,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == fmts[0][0] && format[i + 1] == fmts[0][1])
 		{
-			char c = va_arg(string, int);
-			write(1, &c, 1);
+			_putchar(va_arg(string, int));
 			cnum++;
 			i++;
 		}
@@ -41,7 +40,7 @@ int _printf(const char *format, ...)
 			cnum += writenum(va_arg(string, int));
 			i++;
 		}
-		else if(format[i] == fmts[3][0] && format[i + 1] == fmts[3][1])
+		else if (format[i] == fmts[3][0] && format[i + 1] == fmts[3][1])
 		{
 			cnum += writenum((int) va_arg(string, int));
 			i++;
